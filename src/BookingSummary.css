@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+}
+.page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.body {
+    width: 85vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.backbuttondiv {
+    height: 10vh;
+    width: 85vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   
+}
+
+#backbutton {
+    margin-left: 15px;
+    margin-bottom: 30px;
+    padding: 15px;
+    padding-inline: 25px;
+    border-radius: 5px;
+    font-size: 25px;
+    border: 0px;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.content {
+    width: 85vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.summary {
+    width:50vw ;
+    height :10vh;
+    background-color: #ECD6FC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 40px;
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+
+.details {
+    width: 85vw;
+    height:40vw;
+    display: flex;
+    justify-content: center;
+}
+
+.bookingdetails {
+    width: 65vw;
+    height: 40vw;
+    background-color: #FBEECA;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.para {
+    font-size: 1.5rem;
+    margin-left: 50px;
+}
+
+.thanku {
+    width: 50vw;
+    height: 10vh;
+    background-color: #ECD6FC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+
+.design {
+    width: 15vw;
+    height: 100vh;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.band1 {
+    width: 10vw;
+    height: 100vh;
+    background-color: #DC9E2B;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.band2 {
+    width: 5vw;
+    height: 100vh;
+    background-color: #F9D062;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}

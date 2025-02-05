@@ -1,0 +1,149 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  background: linear-gradient(135deg, #f0f4f8, #e1e7ed); /* Subtle background gradient */
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Main container to hold all the content */
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto; /* Center content with some spacing from top */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+  box-sizing: border-box;
+}
+
+/* Hostel selection section */
+.hostel-selection-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Individual hostel card */
+.hostel-card {
+  flex: 1 1 30%; /* 3 columns layout on larger screens */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent; /* Invisible border for smooth hover effects */
+}
+
+.hostel-card:hover {
+  transform: translateY(-10px); /* Hover lift effect */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  background-color: #f9f9f9; /* Light background color on hover */
+  border-color: #3498db; /* Add a border to emphasize hover */
+}
+
+/* Add subtle animations to the card */
+.hostel-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #3498db, #9b59b6);
+  opacity: 0.1;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.hostel-card:hover:before {
+  opacity: 0.3;
+}
+
+/* Button styles */
+button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Input field styles */
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #3498db; /* Highlight border on focus */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  /* For tablets and smaller laptops */
+  .hostel-selection-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hostel-card {
+    flex: 1 1 100%; /* Full width on smaller screens */
+    margin-bottom: 20px; /* Space between cards */
+  }
+
+  .main-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile devices */
+  body {
+    font-size: 14px; /* Slightly smaller text on mobile */
+  }
+
+  .hostel-selection-container {
+    flex-direction: column;
+    align-items: center; /* Center the cards on mobile */
+  }
+
+  .hostel-card {
+    flex: 1 1 100%; /* Full width */
+    margin-bottom: 15px;
+  }
+
+  button {
+    font-size: 14px; /* Adjust button text size for smaller screens */
+  }
+}

@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .homepage {
+    width: 90%; /* Adjust the width to occupy more space */
+    max-width: 1200px; /* Limit the maximum width */
+    margin: auto;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .logo {
+    width: 200px; /* Make the logo slightly larger */
+  }
+  
+  .event-options {
+    display: flex;
+    justify-content: space-evenly; /* Space buttons evenly */
+    gap: 50px;
+  }
+  
+  .event-button {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    width: 220px; /* Increase button width */
+    height: 250px; /* Increase button height */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .event-button:hover {
+    transform: scale(1.05);
+    border-color: #ffa500;
+  }
+  
+  .event-image {
+    width: 120px; /* Make images slightly larger */
+    margin-bottom: 15px;
+  }
+  

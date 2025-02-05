@@ -1,0 +1,107 @@
+.personal-info-container {
+  width: 350px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+.header {
+  background-color: #dab6fc;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.counter p {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 15px;
+}
+
+.circle-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.person-section {
+  margin-top: 15px;
+}
+
+.name-label, .gender-label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  background: #dab6fc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.name-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background: #fcefb4;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.gender-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: #5a5a5a; /* Changed to a dark gray for better visibility */
+}
+
+.radio-container input {
+  display: none;
+}
+
+.radio-circle {
+  width: 16px;
+  height: 16px;
+  background: #ddd;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+.radio-container input:checked + .radio-circle {
+  background: black;
+}
+.alert-message {
+  background-color: #ffcc00; /* Your desired alert background color */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Adjust to your design */
+  margin: 20px 0;
+}

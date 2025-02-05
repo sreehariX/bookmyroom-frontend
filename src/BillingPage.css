@@ -1,0 +1,109 @@
+.billing-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .billing-header {
+    display: flex;
+    align-items: center;
+    background-color: #e8a735;
+    padding: 10px;
+  }
+  
+  .billing-header h2 {
+    margin-left: 10px;
+    font-size: 24px;
+  }
+  
+  .back-btn {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .billing-content {
+    padding: 20px;
+  }
+  
+  .dropdown {
+    margin-bottom: 15px;
+  }
+  
+  .dropdown label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .hostel-info {
+    background: #eac4fc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .price {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .rating {
+    font-size: 20px;
+  }
+  
+  .room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 5px;
+    justify-content: center;
+  }
+  
+  .room {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .available {
+    background: #ffefc3;
+  }
+  
+  .booked {
+    background: #dcdcdc;
+  }
+  
+  .selected {
+    background: #b2f2bb;
+  }
+  
+  .elevator {
+    background: black;
+  }
+  
+  .legend {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .legend-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
