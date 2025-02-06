@@ -16,7 +16,7 @@ function App() {
         <Route path="/personal-info" element={<PersonalInformation />} />
         <Route path="/hostel-selection" element={<HostelSelection setSelectedHostel={setSelectedHostel} />} />
         <Route path="/billing/" element={<BillingPage />} />
-       
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
   );
