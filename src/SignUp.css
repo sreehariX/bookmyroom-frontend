@@ -84,6 +84,7 @@
     border-radius: 8px;
     width: 100%;
     outline: none;
+    color:#000000
 }
 
 .form-container{
@@ -203,5 +204,3 @@
     right: 0;
     transform: translateX(0);
 }
-
-

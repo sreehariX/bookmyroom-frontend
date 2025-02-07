@@ -10,7 +10,7 @@ import h5 from "./assets/h5.jpeg";
 import h15 from "./assets/h15.jpeg";
 import h11 from "./assets/h11.jpeg";
 
-const HostelSelection = ({ setSelectedHostel }) => {
+const HostelSelection = () => {  // ❌ Remove setSelectedHostel from props
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -18,10 +18,8 @@ const HostelSelection = ({ setSelectedHostel }) => {
   };
 
   const handleHostelClick = (hostel, price, wings, floors) => {
-    setSelectedHostel(hostel); // Save selected hostel globally
-    navigate("/billing", {
-      state: { hostel, price, wings, floors },
-    }); // Navigate to BillingPage with data
+    console.log(`Navigating to billing with: ${hostel}`);  // Debugging log
+    navigate("/billing", { state: { hostel, price, wings, floors } });
   };
 
   return (
@@ -85,3 +83,4 @@ const HostelSelection = ({ setSelectedHostel }) => {
 };
 
 export default HostelSelection;
+

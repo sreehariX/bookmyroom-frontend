@@ -10,9 +10,11 @@ const BillingPage = () => {
   const isPremiumHostel = hostel === "H15" || hostel === "H16";
   const totalFloors = isPremiumHostel ? 10 : 2;
   const roomsPerFloor = isPremiumHostel ? 18 : 30;
+  const pricePerPerson = isPremiumHostel ? 1000 : 500;
 
   const [selectedFloor, setSelectedFloor] = useState(1);
-  const [selectedWing, setSelectedWing] = useState(isPremiumHostel ? "A" : ""); 
+  const [selectedWing, setSelectedWing] = useState(isPremiumHostel ? "A" : "");
+  const [selectedRooms, setSelectedRooms] = useState([]);
 
   useEffect(() => {
     if (!hostel) {
@@ -20,8 +22,27 @@ const BillingPage = () => {
     }
   }, [hostel, navigate]);
 
+  const toggleRoomSelection = (roomId) => {
+    if (selectedRooms.includes(roomId)) {
+      setSelectedRooms(selectedRooms.filter((id) => id !== roomId));
+    } else {
+      setSelectedRooms([...selectedRooms, roomId]);
+    }
+  };
+
   const handleBack = () => {
     navigate("/hostel-selection");
+  };
+
+  const handlePayment = () => {
+    const bookingDetails = {
+      name: "John Doe", // Replace with actual user data
+      date: new Date().toLocaleDateString(),
+      timing: "Check-in: 2 PM | Check-out: 12 PM",
+      hostel,
+      roomNo: selectedRooms.join(", "),
+    };
+    navigate("/booking-summary", { state: { bookingDetails } });
   };
 
   return (
@@ -59,19 +80,33 @@ const BillingPage = () => {
         </div>
 
         <div className="room-grid">
-          {[...Array(roomsPerFloor)].map((_, index) => (
-            <div key={index} className={`room ${index % 5 === 0 ? "booked" : "available"}`}>
-              {index + 1}
-            </div>
-          ))}
+          {[...Array(roomsPerFloor)].map((_, index) => {
+            const roomId = `F${selectedFloor}-R${index + 1}`;
+            return (
+              <div
+                key={roomId}
+                className={`room ${selectedRooms.includes(roomId) ? "selected" : index % 5 === 0 ? "booked" : "available"}`}
+                onClick={() => {
+                  if (!(index % 5 === 0)) toggleRoomSelection(roomId);
+                }}
+              >
+                {index + 1}
+              </div>
+            );
+          })}
         </div>
 
         <div className="legend">
-          <div><span className="legend-box elevator"></span> Elevator</div>
           <div><span className="legend-box available"></span> Available</div>
           <div><span className="legend-box selected"></span> Selected</div>
           <div><span className="legend-box booked"></span> Booked</div>
         </div>
+
+        {selectedRooms.length > 0 && (
+          <button className="pay-button" onClick={handlePayment}>
+            Click to Pay ₹{selectedRooms.length * pricePerPerson}
+          </button>
+        )}
       </div>
     </div>
   );
