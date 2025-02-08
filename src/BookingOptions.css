@@ -1,0 +1,45 @@
+/* BookingOptions.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}
+
+.button {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 10px 0;
+}
+
+.button:hover {
+    background-color: #ff4757;
+    transform: scale(1.05);
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
