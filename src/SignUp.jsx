@@ -54,7 +54,7 @@ function SignUp() {
         localStorage.setItem("refreshToken", response.data.refresh);
         localStorage.setItem("user", JSON.stringify(response.data.user));
 
-        setIsSignUp(false); // Switch to login form
+        setIsSignUp(false); 
         setError("Registration successful! Please login.");
       }
     } catch (error) {

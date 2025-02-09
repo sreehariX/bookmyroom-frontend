@@ -19,17 +19,40 @@ function BookingSummary() {
                 </div>
 
                 <div className="content">
-                    <div className="summary">Summary:</div>
+                    <div className="summary">Booking Summary</div>
                     <div className="details">
                         <div className="bookingdetails">
-                            <p className="para">Name: {bookingDetails.name}</p>
-                            <p className="para">Date: {bookingDetails.date}</p>
-                            <p className="para">Timing: {bookingDetails.timing}</p>
-                            <p className="para">Hostel: {bookingDetails.hostel}</p>
-                            <p className="para">Room No: {bookingDetails.roomNo}</p>
+                            <div className="booking-section">
+                                <h3>Event Details</h3>
+                                <p className="para">Event: {bookingDetails.event}</p>
+                                <p className="para">Date: {bookingDetails.date}</p>
+                                <p className="para">Timing: {bookingDetails.timing}</p>
+                            </div>
+
+                            <div className="booking-section">
+                                <h3>Room Details</h3>
+                                <p className="para">Hostel: {bookingDetails.hostel}</p>
+                                <p className="para">Room Number: {bookingDetails.room_number}</p>
+                                <p className="para">Price: {bookingDetails.price}</p>
+                            </div>
+
+                            <div className="booking-section">
+                                <h3>Resident Details</h3>
+                                <p className="para">Total Residents: {bookingDetails.total_residents}</p>
+                                <div className="residents-list">
+                                    {bookingDetails.residents?.map((resident, index) => (
+                                        <div key={index} className="resident-item">
+                                            <span className="resident-number">{index + 1}.</span>
+                                            {resident}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="confirmation-message">Your room has been confirmed! Thank you!</div>
+                    <div className="confirmation-message">
+                        Your booking has been confirmed! Thank you!
+                    </div>
                 </div>
             </div>
 

@@ -9,7 +9,7 @@ const PersonalInformation = () => {
     { name: "", gender: "" },
     { name: "", gender: "" },
   ]);
-  const [alertMessage, setAlertMessage] = useState(''); // State to track alert message
+  const [alertMessage, setAlertMessage] = useState(''); 
 
   const handleIncrease = () => {
     if (numPeople < 4) {

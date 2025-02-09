@@ -1,112 +1,263 @@
 .billing-container {
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    font-family: "Arial", sans-serif;
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.billing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #d39f29, #f1c40f);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateX(-5px);
+}
+
+.billing-header h2 {
+  color: white;
+  font-size: 1.8rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hostel-info {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.room-status-legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.status {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status.empty::before {
+  background: white;
+  border: 2px solid #ddd;
+}
+
+.status.partial::before {
+  background: #ffeaa7;
+}
+
+.status.full::before {
+  background: #fab1a0;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.room {
+  padding: 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-height: 100px;
+}
+
+.room:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.room.empty {
+  background: white;
+  border: 2px solid #eee;
+}
+
+.room.empty:hover {
+  border-color: #d39f29;
+}
+
+.room.partial {
+  background: #ffeaa7;
+  color: #2c3e50;
+}
+
+.room.full {
+  background: #fab1a0;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.room-number {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.occupancy {
+  font-size: 0.9rem;
+  color: #2c3e50;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.4rem;
+  border-radius: 6px;
+}
+
+.booking-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.booking-form h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.booking-form p {
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.booking-form input:focus {
+  border-color: #d39f29;
+  outline: none;
+}
+
+.booking-form button {
+  background: #d39f29;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.booking-form button:hover {
+  background: #c39018;
+  transform: translateY(-2px);
+}
+
+.residents-list {
+  margin: 1.5rem 0;
+}
+
+.resident-item {
+  background: #f8f9fa;
+  padding: 1rem;
+  margin: 0.8rem 0;
+  border-radius: 8px;
+  color: #2c3e50;
+  font-weight: 500;
+  border-left: 4px solid #d39f29;
+}
+
+.confirm-button {
+  width: 100%;
+  background: #2ecc71;
+  color: white;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.confirm-button:hover {
+  background: #27ae60;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .billing-container {
+    width: 95%;
+    padding: 1rem;
   }
-  
-  .billing-header {
-    display: flex;
-    align-items: center;
-    background-color: #e8a735;
-    padding: 10px;
+
+  .rooms-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 1rem;
   }
-  
-  .billing-header h2 {
-    margin-left: 10px;
-    font-size: 24px;
-  }
-  
-  .back-btn {
-    border: none;
-    background: none;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .billing-content {
-    padding: 20px;
-  }
-  
-  .dropdown {
-    margin-bottom: 15px;
-  }
-  
-  .dropdown label {
-    display: block;
-    font-weight: bold;
-  }
-  
-  select {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-  
-  .hostel-info {
-    background: #eac4fc;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .price {
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  .rating {
-    font-size: 20px;
-  }
-  
-  .room-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-    gap: 5px;
-    justify-content: center;
-  }
-  
+
   .room {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
+    padding: 1rem;
   }
-  
-  .available {
-    background: #ffefc3;
+
+  .room-number {
+    font-size: 1rem;
   }
-  
-  .booked {
-    background: #dcdcdc;
+
+  .occupancy {
+    font-size: 0.8rem;
   }
-  
-  .selected {
-    background: #b2f2bb;
-  }
-  
-  .elevator {
-    background: black;
-  }
-  
-  .legend {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    color: #7a3933;
-  }
-  
-  .legend-box {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-  }
-  .pay-button{
-  background-color: #337a3c;
-  }
+}
